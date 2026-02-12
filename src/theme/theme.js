@@ -1,8 +1,8 @@
 import { createTheme } from "@mui/material";
 
 export const lightTheme = createTheme({
-  mode: "light",
   palette: {
+    mode: "light",
     primary: {
       main: "hsl(163, 72%, 41%)",
     },
@@ -16,7 +16,11 @@ export const lightTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "Inter, sans-serif",
+    caption: {
+      color: "hsl(163, 72%, 41%)",
+      fontWeight: "bold",
+    },
   },
   components: {
     MuiCard: {
@@ -26,7 +30,7 @@ export const lightTheme = createTheme({
           flex: 1,
         }
       }
-    }
+    },
   },
 });
 
@@ -46,7 +50,14 @@ export const darkTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "Inter, sans-serif",
+    caption: {
+      color: "hsl(163, 72%, 41%)",
+      fontWeight: "bold",
+    },
+    body2: {
+      color: "hsl(230, 22%, 74%)",
+    }
   },
   components: {
     MuiCard: {
