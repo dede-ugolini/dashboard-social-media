@@ -1,5 +1,7 @@
 import { createTheme } from "@mui/material";
 
+const theme = createTheme();
+
 export const lightTheme = createTheme({
   palette: {
     mode: "light",
@@ -20,6 +22,16 @@ export const lightTheme = createTheme({
     caption: {
       color: "hsl(163, 72%, 41%)",
       fontWeight: "bold",
+      fontSize: "1.5rem",
+      [theme.breakpoints.up('xs')]: {
+        fontSize: '0.6rem',
+      },
+      [theme.breakpoints.up('sm')]: {
+        fontSize: '0.7rem',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: '1.0rem',
+      },
     },
   },
   components: {
@@ -54,6 +66,16 @@ export const darkTheme = createTheme({
     caption: {
       color: "hsl(163, 72%, 41%)",
       fontWeight: "bold",
+      fontSize: "1.5rem",
+      [theme.breakpoints.up('xs')]: {
+        fontSize: '0.6rem',
+      },
+      [theme.breakpoints.up('sm')]: {
+        fontSize: '0.7rem',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: '1.0rem',
+      },
     },
     body2: {
       color: "hsl(230, 22%, 74%)",
