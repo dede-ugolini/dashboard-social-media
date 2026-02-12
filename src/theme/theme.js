@@ -15,16 +15,19 @@ export const lightTheme = createTheme({
       header: "hsl(225, 100%, 98%)",
     },
   },
+  typography: {
+    fontFamily: "Inter, sans-serif"
+  },
   components: {
     MuiCard: {
       styleOverrides: {
         root: {
           textAlign: "center",
+          flex: 1,
         }
       }
     }
-
-  }
+  },
 });
 
 export const darkTheme = createTheme({
@@ -42,11 +45,15 @@ export const darkTheme = createTheme({
       header: "hsl(232, 19%, 15%)",
     },
   },
+  typography: {
+    fontFamily: "Inter, sans-serif"
+  },
   components: {
     MuiCard: {
       styleOverrides: {
         root: {
           textAlign: "center",
+          flex: 1,
         }
       }
     }
