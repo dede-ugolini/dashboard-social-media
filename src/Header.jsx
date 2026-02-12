@@ -6,8 +6,8 @@ export default function Header({ darkMode, setDarkMode }) {
   return (
     <>
       <Stack bgcolor='background.header' height={300} width="100%" justifyContent="center" alignItems="center">
-        <Stack width="80%" direction="row" justifyContent="space-between">
-          <Typography variant="h4">
+        <Stack width="80%" direction={{ xs: "column", sm: "row" }} justifyContent="space-between">
+          <Typography variant="h4" fontWeight="bold">
             Social Media Dashboard
           </Typography>
           <Stack alignItems="end">
