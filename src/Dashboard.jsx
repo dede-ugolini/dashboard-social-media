@@ -48,8 +48,8 @@ export default function Dashboard() {
             </CardActionArea>
           </Card>
 
-          <Card raised sx={{ padding: 3, borderTop: "5px solid hsl(200, 89%, 53%)" }}>
-            <CardActionArea>
+          <Card raised>
+            <CardActionArea sx={{ padding: 3, borderTop: "5px solid hsl(200, 89%, 53%)" }}>
               <CardMedia>
                 <img src={TwitterIcon} />
                 @nathanf
@@ -85,8 +85,8 @@ export default function Dashboard() {
             </CardActionArea>
           </Card>
 
-          <Card raised sx={{ padding: 3, height: "100%", borderTop: "5px solid red" }} >
-            <CardActionArea>
+          <Card raised>
+            <CardActionArea sx={{ padding: 3, height: "100%", borderTop: "5px solid red" }}>
               <CardMedia>
                 <img src={InstagramIcon} />
                 @realnathanf
@@ -122,8 +122,8 @@ export default function Dashboard() {
             </CardActionArea>
           </Card>
 
-          <Card raised sx={{ padding: 3, borderTop: "5px solid hsl(348, 97%, 39%)" }}>
-            <CardActionArea>
+          <Card raised>
+            <CardActionArea sx={{ padding: 3, borderTop: "5px solid hsl(348, 97%, 39%)" }}>
               <CardMedia>
                 <img src={YoutubeIcon} />
                 Nathan F.
@@ -135,7 +135,7 @@ export default function Dashboard() {
                     sm: "2.5rem",
                     md: "3.0rem",
                     lg: "3.5rem",
-                    xl: "4rem",
+                    xl: "5rem",
                   }
                 }}>
                   8239
@@ -152,9 +152,11 @@ export default function Dashboard() {
                 }}>
                   SUBSCRIBERS
                 </Typography>
-                <Typography variant="caption">
-                  144 Today
-                </Typography>
+                <Stack sx={{ paddingTop: 3 }}>
+                  <Typography variant="caption">
+                    144 Today
+                  </Typography>
+                </Stack>
               </CardContent>
             </CardActionArea>
           </Card>
