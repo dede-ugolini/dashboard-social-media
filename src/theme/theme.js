@@ -85,7 +85,7 @@ export const lightTheme = createTheme({
       fontWeight: "bold",
       fontSize: "1.5rem",
       [theme.breakpoints.up('xs')]: {
-        fontSize: '0.6rem',
+        fontSize: '0.9rem',
       },
       [theme.breakpoints.up('sm')]: {
         fontSize: '0.7rem',
@@ -95,6 +95,9 @@ export const lightTheme = createTheme({
       },
       [theme.breakpoints.up('lg')]: {
         fontSize: '1.1rem',
+      },
+      [theme.breakpoints.up('xl')]: {
+        fontSize: '1.2rem',
       },
     },
   },
@@ -193,9 +196,8 @@ export const darkTheme = createTheme({
     caption: {
       color: "hsl(163, 72%, 41%)",
       fontWeight: "bold",
-      fontSize: "1.5rem",
       [theme.breakpoints.up('xs')]: {
-        fontSize: '0.6rem',
+        fontSize: '0.9rem',
       },
       [theme.breakpoints.up('sm')]: {
         fontSize: '0.7rem',
@@ -205,6 +207,9 @@ export const darkTheme = createTheme({
       },
       [theme.breakpoints.up('lg')]: {
         fontSize: '1.1rem',
+      },
+      [theme.breakpoints.up('xl')]: {
+        fontSize: '1.2rem',
       },
     },
   },
