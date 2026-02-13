@@ -20,9 +20,26 @@ export const lightTheme = createTheme({
 
   typography: {
     fontFamily: "Inter, sans-serif",
+    h2: {
+      [theme.breakpoints.up('xs')]: {
+        fontSize: "2rem",
+      },
+      [theme.breakpoints.up('sm')]: {
+        fontSize: "2.5rem",
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: "3.0rem",
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: "3.5rem",
+      },
+      [theme.breakpoints.up('xl')]: {
+        fontSize: "5rem",
+      },
+    },
 
     h5: {
-      color: "hsl(230, 17%, 14%)",
+      color: "hsl(228, 12%, 44%)",
     },
 
     body2: {
@@ -97,6 +114,24 @@ export const darkTheme = createTheme({
       },
       [theme.breakpoints.up('md')]: {
         fontSize: '0.9rem',
+      },
+    },
+
+    h2: {
+      [theme.breakpoints.up('xs')]: {
+        fontSize: "2rem",
+      },
+      [theme.breakpoints.up('sm')]: {
+        fontSize: "2.5rem",
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: "3.0rem",
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: "3.5rem",
+      },
+      [theme.breakpoints.up('xl')]: {
+        fontSize: "5rem",
       },
     },
     body2: {
