@@ -1,12 +1,27 @@
-import { CardActionArea, Divider, Stack, Box, Paper, Typography, Card, CardContent, CardMedia, CardActions, CardHeader, Icon } from "@mui/material";
+import { Box, Card, CardActionArea, CardContent, CardMedia, Paper, Stack, Typography } from "@mui/material";
 
-import FacebookIcon from '/icon-facebook.svg'
-import InstagramIcon from '/icon-instagram.svg'
-import TwitterIcon from '/icon-twitter.svg'
-import YoutubeIcon from '/icon-youtube.svg'
-import IconUp from '/icon-up.svg'
+import IconDown from '/icon-down.svg';
+import FacebookIcon from '/icon-facebook.svg';
+import InstagramIcon from '/icon-instagram.svg';
+import TwitterIcon from '/icon-twitter.svg';
+import IconUp from '/icon-up.svg';
+import YoutubeIcon from '/icon-youtube.svg';
 
 export default function Dashboard() {
+
+  const OverviewRowOne = [
+    { title: "Page Views", icon: FacebookIcon, data: "87", per: "3" },
+    { title: "Likes", icon: FacebookIcon, data: "52", per: "2" },
+    { title: "Likes", icon: InstagramIcon, data: "5462", per: "2257" },
+    { title: "Profile Views", icon: InstagramIcon, data: "52", per: "1375" },
+  ]
+
+  const OverviewRowTwo = [
+    { title: "Retweets", icon: TwitterIcon, data: "117", per: "303" },
+    { title: "Likes", icon: TwitterIcon, data: "507", per: "553" },
+    { title: "Likes", icon: YoutubeIcon, data: "107", per: "19" },
+    { title: "Total Views", icon: YoutubeIcon, data: "1407", per: "12" },
+  ]
 
   return (
     <>
@@ -18,32 +33,18 @@ export default function Dashboard() {
                 <img src={FacebookIcon} />
               </CardMedia>
               <CardContent>
-                <Typography variant="h2" fontWeight="bold" sx={{
-                  fontSize: {
-                    xs: "2rem",
-                    sm: "2.5rem",
-                    md: "3.0rem",
-                    lg: "3.5rem",
-                    xl: "5rem",
-                  }
-                }}>
+                <Typography variant="h2" fontWeight="bold">
                   1987
                 </Typography>
-                <Typography variant="body2" sx={{
-                  fontSize: {
-                    xs: "0.6rem",
-                    sm: "0.8rem",
-                    md: "0.9rem",
-                    lg: "1.1rem",
-                    xl: "1.2rem",
-                    letterSpacing: "0.1rem",
-                  }
-                }}>
+                <Typography variant="body2">
                   FOLLOWERS
                 </Typography>
-                <Typography variant="caption">
-                  <img src={IconUp} style={{ position: "relative", top: -3, left: -5 }} />12 Today
-                </Typography>
+
+                <Stack sx={{ paddingTop: 3 }}>
+                  <Typography variant="caption">
+                    <img src={IconUp} style={{ position: "relative", top: -3, left: -5 }} />12 Today
+                  </Typography>
+                </Stack>
               </CardContent>
             </CardActionArea>
           </Card>
@@ -55,32 +56,18 @@ export default function Dashboard() {
                 @nathanf
               </CardMedia>
               <CardContent>
-                <Typography variant="h2" fontWeight="bold" sx={{
-                  fontSize: {
-                    xs: "2rem",
-                    sm: "2.5rem",
-                    md: "3.0rem",
-                    lg: "3.5rem",
-                    xl: "5rem",
-                  }
-                }}>
+                <Typography variant="h2" fontWeight="bold">
                   1044
                 </Typography>
-                <Typography variant="body2" sx={{
-                  fontSize: {
-                    xs: "0.6rem",
-                    sm: "0.8rem",
-                    md: "0.9rem",
-                    lg: "1.1rem",
-                    xl: "1.2rem",
-                    letterSpacing: "0.1rem",
-                  }
-                }}>
+                <Typography variant="body2">
                   FOLLOWERS
                 </Typography>
-                <Typography variant="caption">
-                  <img src={IconUp} style={{ position: "relative", top: -3, left: -5 }} />99 Today
-                </Typography>
+
+                <Stack sx={{ paddingTop: 3 }}>
+                  <Typography variant="caption">
+                    <img src={IconUp} style={{ position: "relative", top: -3, left: -5 }} />99 Today
+                  </Typography>
+                </Stack>
               </CardContent>
             </CardActionArea>
           </Card>
@@ -91,34 +78,20 @@ export default function Dashboard() {
                 <img src={InstagramIcon} />
                 @realnathanf
               </CardMedia>
-              <CardMedia>
-                <Typography variant="h2" fontWeight="bold" sx={{
-                  fontSize: {
-                    xs: "2rem",
-                    sm: "2.5rem",
-                    md: "3.0rem",
-                    lg: "3.5rem",
-                    xl: "5rem",
-                  }
-                }}>
+              <CardContent>
+                <Typography variant="h2" fontWeight="bold">
                   11K
                 </Typography>
-                <Typography variant="body2" sx={{
-                  fontsize: {
-                    xs: "0.6rem",
-                    sm: "0.8rem",
-                    md: "0.9rem",
-                    lg: "1.1rem",
-                    xl: "1.2rem",
-                    letterSpacing: "0.1rem",
-                  }
-                }}>
+                <Typography variant="body2">
                   FOLLOWERS
                 </Typography>
-                <Typography variant="caption">
-                  <img src={IconUp} style={{ position: "relative", top: -3, left: -5 }} />1099 Today
-                </Typography>
-              </CardMedia>
+                <Stack sx={{ paddingTop: 3 }}>
+                  <Typography variant="caption">
+                    <img src={IconUp} style={{ position: "relative", top: -3, left: -5 }} />1099 Today
+                  </Typography>
+
+                </Stack>
+              </CardContent>
             </CardActionArea>
           </Card>
 
@@ -129,31 +102,15 @@ export default function Dashboard() {
                 Nathan F.
               </CardMedia>
               <CardContent>
-                <Typography variant="h2" fontWeight="bold" sx={{
-                  fontSize: {
-                    xs: "2rem",
-                    sm: "2.5rem",
-                    md: "3.0rem",
-                    lg: "3.5rem",
-                    xl: "5rem",
-                  }
-                }}>
+                <Typography variant="h2" fontWeight="bold">
                   8239
                 </Typography>
-                <Typography variant="body2" sx={{
-                  fontsize: {
-                    xs: "0.6rem",
-                    sm: "0.8rem",
-                    md: "0.9rem",
-                    lg: "1.1rem",
-                    xl: "1.2rem",
-                    letterSpacing: "0.1rem",
-                  }
-                }}>
+                <Typography variant="body2">
                   SUBSCRIBERS
                 </Typography>
                 <Stack sx={{ paddingTop: 3 }}>
-                  <Typography variant="caption">
+                  <Typography variant="caption" color="secondary">
+                    <img src={IconDown} style={{ position: "relative", top: -3, left: -5 }} />
                     144 Today
                   </Typography>
                 </Stack>
@@ -168,89 +125,55 @@ export default function Dashboard() {
           </Typography>
         </Stack>
 
-        <Stack py={3} direction="row" spacing={5} alignItems="start" width="80%">
-          <Card raised>
-            <CardActionArea>
-              <CardMedia>
-                <img src={FacebookIcon} />
-                @nathanf
-              </CardMedia>
-              <CardContent>
-                <Typography variant="h2" fontWeight="bold">
-                  1987
-                </Typography>
-                <Typography variant="body2">
-                  FOLLOWERS
-                </Typography>
-                <Typography variant="body2">
-                  12 Today
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+        <Stack width="80%">
+          <Stack py={3} direction="row" spacing={5} alignItems="start">
+            {OverviewRowOne.map((index) => {
+              return (
+                <Stack py={3} px={5} component={Paper} spacing={2} sx={{ flex: 1 }}>
+                  <Stack direction={"row"} justifyContent="space-between">
+                    <Typography variant="body2" fontWeight="bold">
+                      {index.title}
+                    </Typography>
+                    <img src={index.icon} />
+                  </Stack>
+                  <Stack direction={"row"} justifyContent="space-between">
+                    <Typography variant="h3" fontWeight="bold">
+                      {index.data}
+                    </Typography>
+                    <Typography variant="body2" sx={{ alignContent: "end", }}>
+                      <img src={IconDown} style={{ position: "relative", top: -3, left: -5 }} />
+                      {index.per}
+                    </Typography>
+                  </Stack>
+                </Stack>
+              )
+            })}
+          </Stack>
 
-          <Card raised>
-            <CardActionArea>
-              <CardMedia>
-                <img src={TwitterIcon} />
-                @nathanf
-              </CardMedia>
-              <CardContent>
-                <Typography variant="h2" fontWeight="bold">
-                  1044
-                </Typography>
-                <Typography variant="body2">
-                  FOLLOWERS
-                </Typography>
-                <Typography>
-                  99 Today
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-
-          <Card raised>
-            <CardActionArea>
-              <CardMedia>
-                <img src={InstagramIcon} />
-                @realnathanf
-              </CardMedia>
-              <CardMedia>
-                <Typography variant="h2" fontWeight="bold">
-                  11K
-                </Typography>
-                <Typography variant="body2">
-                  FOLLOWERS
-                </Typography>
-                <Typography variant="body2">
-                  1099 Today
-                </Typography>
-              </CardMedia>
-            </CardActionArea>
-          </Card>
-
-          <Card>
-            <CardActionArea>
-              <CardMedia>
-                <img src={YoutubeIcon} />
-                Nathan F.
-              </CardMedia>
-              <CardContent>
-                <Typography variant="h2" fontWeight="bold">
-                  8239
-                </Typography>
-                <Typography variant="body2" fontWeight="bold">
-                  SUBSCRIBERS
-                </Typography>
-                <Typography variant="body" fontWeight="bold">
-                  144 Today
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-
+          <Stack py={3} direction="row" spacing={5} alignItems="start">
+            {OverviewRowTwo.map((index) => {
+              return (
+                <Stack py={3} px={5} component={Paper} spacing={2} sx={{ flex: 1 }}>
+                  <Stack direction={"row"} justifyContent="space-between">
+                    <Typography variant="body2" fontWeight="bold">
+                      {index.title}
+                    </Typography>
+                    <img src={index.icon} />
+                  </Stack>
+                  <Stack direction="row" justifyContent="space-between">
+                    <Typography variant="h3" fontWeight="bold">
+                      {index.data}
+                    </Typography>
+                    <Typography variant="body2" sx={{ alignContent: "end" }}>
+                      <img src={IconDown} style={{ position: "relative", top: -3, left: -5 }} />
+                      {index.per}
+                    </Typography>
+                  </Stack>
+                </Stack>
+              )
+            })}
+          </Stack>
         </Stack>
-
       </Stack >
     </>
   );
