@@ -101,6 +101,11 @@ export const lightTheme = createTheme({
           flex: 1,
         }
       }
+    },
+    MuiPaper: {
+      defaultProps: {
+        elevation: 0,
+      }
     }
   }
 });
@@ -199,6 +204,11 @@ export const darkTheme = createTheme({
           textAlign: "center",
           flex: 1,
         }
+      }
+    },
+    MuiPaper: {
+      defaultProps: {
+        elevation: 0,
       }
     }
   }
