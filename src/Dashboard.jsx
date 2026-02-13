@@ -31,14 +31,14 @@ export default function Dashboard() {
   ]
   return (
     <>
-      <Stack position="relative" top="-4rem" width="100%" justifyContent="center" alignItems={"center"}>
+      <Stack py={{ xs: 3, sm: 1 }} position="relative" top="-6rem" width="100%" justifyContent="center" alignItems={"center"}>
         <Stack spacing={5} direction={{ xs: "column", sm: "row" }} width="80%" justifyContent="center" alignItems="center">
           {Media.map((index) => {
             return (
-              <Card>
+              <Card sx={{ width: "100%" }}>
                 <CardActionArea sx={{ borderTop: "5px solid hsl(208, 92%, 53%)", padding: 3, }}>
                   <CardMedia >
-                    <Typography variant="body2" fontWeight="bold">
+                    <Typography variant="body2" fontWeight="bold" sx={{ paddingTop: 3 }}>
                       <img src={index.icon} style={{ position: "relative", top: 5, left: -5 }} />@{index.nick}
                     </Typography>
                   </CardMedia>
@@ -68,10 +68,10 @@ export default function Dashboard() {
         </Stack>
 
         <Stack width="80%">
-          <Stack py={3} direction="row" spacing={5} alignItems="start">
+          <Stack py={{ xs: 1, sm: 3 }} direction={{ xs: "column", sm: "row" }} spacing={{ xs: 2, sm: 5 }} alignItems="start">
             {OverviewRowOne.map((index) => {
               return (
-                <Stack py={3} px={5} component={Paper} spacing={2} sx={{ flex: 1 }}>
+                <Stack py={3} px={5} component={Paper} spacing={2} sx={{ flex: 1 }} width="100%">
                   <Stack direction={"row"} justifyContent="space-between">
                     <Typography variant="body2" fontWeight="bold">
                       {index.title}
@@ -92,10 +92,10 @@ export default function Dashboard() {
             })}
           </Stack>
 
-          <Stack py={3} direction="row" spacing={5} alignItems="start">
+          <Stack py={{ xs: 1, sm: 3 }} direction={{ xs: "column", sm: "row" }} spacing={{ xs: 2, sm: 5 }} alignItems="start">
             {OverviewRowTwo.map((index) => {
               return (
-                <Stack py={3} px={5} component={Paper} spacing={2} sx={{ flex: 1 }}>
+                <Stack py={3} px={5} component={Paper} spacing={2} sx={{ flex: 1 }} width="100%">
                   <Stack direction={"row"} justifyContent="space-between">
                     <Typography variant="body2" fontWeight="bold">
                       {index.title}
