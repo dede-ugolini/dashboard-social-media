@@ -22,7 +22,7 @@ export const lightTheme = createTheme({
     fontFamily: "Inter, sans-serif",
     h2: {
       [theme.breakpoints.up('xs')]: {
-        fontSize: "2rem",
+        fontSize: "4rem",
       },
       [theme.breakpoints.up('sm')]: {
         fontSize: "2.5rem",
@@ -40,7 +40,7 @@ export const lightTheme = createTheme({
 
     h3: {
       [theme.breakpoints.up('xs')]: {
-        fontSize: "1rem",
+        fontSize: "1.8rem",
       },
       [theme.breakpoints.up('sm')]: {
         fontSize: "1.5rem",
@@ -64,7 +64,7 @@ export const lightTheme = createTheme({
       fontSize: "1.5rem",
       color: "hsl(228, 12%, 44%)",
       [theme.breakpoints.up('xs')]: {
-        fontSize: '0.7rem',
+        fontSize: '0.9rem',
       },
       [theme.breakpoints.up('sm')]: {
         fontSize: '0.8rem'
@@ -72,6 +72,12 @@ export const lightTheme = createTheme({
       [theme.breakpoints.up('md')]: {
         fontSize: '1.0rem',
       },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '1.3rem',
+      },
+      [theme.breakpoints.up('xl')]: {
+        fontSize: '1.4',
+      }
     },
 
     caption: {
@@ -130,7 +136,7 @@ export const darkTheme = createTheme({
 
     h2: {
       [theme.breakpoints.up('xs')]: {
-        fontSize: "2rem",
+        fontSize: "4rem",
       },
       [theme.breakpoints.up('sm')]: {
         fontSize: "2.5rem",
@@ -148,7 +154,7 @@ export const darkTheme = createTheme({
 
     h3: {
       [theme.breakpoints.up('xs')]: {
-        fontSize: "1rem",
+        fontSize: "1.8rem",
       },
       [theme.breakpoints.up('sm')]: {
         fontSize: "1.5rem",
@@ -168,7 +174,7 @@ export const darkTheme = createTheme({
       color: "hsl(230, 22%, 74%)",
       fontSize: "1.5rem",
       [theme.breakpoints.up('xs')]: {
-        fontSize: '0.7rem',
+        fontSize: '0.9rem',
       },
       [theme.breakpoints.up('sm')]: {
         fontSize: '0.8rem'
@@ -176,6 +182,12 @@ export const darkTheme = createTheme({
       [theme.breakpoints.up('md')]: {
         fontSize: '1.0rem',
       },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '1.3rem',
+      },
+      [theme.breakpoints.up('xl')]: {
+        fontSize: '1.4',
+      }
     },
 
     caption: {
