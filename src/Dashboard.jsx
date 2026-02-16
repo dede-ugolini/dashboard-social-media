@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Paper, Stack, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia, Paper, Stack, Typography } from "@mui/material";
 
 import IconDown from '/icon-down.svg';
 import FacebookIcon from '/icon-facebook.svg';
@@ -24,10 +24,10 @@ export default function Dashboard() {
   ]
 
   const Media = [
-    { icon: FacebookIcon, nick: "nathanf", data: "1987", subtitle: "Followers", iconToday: IconUp, ntoday: "12" },
-    { icon: TwitterIcon, nick: "nathanf", data: "1044", subtitle: "Followers", iconToday: IconUp, ntoday: "99" },
+    { icon: FacebookIcon, nick: "nathanf", border: "hsl(208, 92%, 53%)", data: "1987", subtitle: "Followers", iconToday: IconUp, ntoday: "12" },
+    { icon: TwitterIcon, nick: "nathanf", border: "hsl(203, 89%, 53%)", data: "1044", subtitle: "Followers", iconToday: IconUp, ntoday: "99" },
     { icon: InstagramIcon, nick: "realnathanf", data: "11K", subtitle: "Followers", iconToday: IconUp, ntoday: "1099" },
-    { icon: YoutubeIcon, nick: "Nathan F.", data: "8239", subtitle: "Subscribers", iconToday: IconDown, ntoday: "144" },
+    { icon: YoutubeIcon, nick: "Nathan F.", border: "hsl(348, 97%, 39%)", data: "8239", subtitle: "Subscribers", iconToday: IconDown, ntoday: "144" },
   ]
   return (
     <>
@@ -36,7 +36,16 @@ export default function Dashboard() {
           {Media.map((index) => {
             return (
               <Card sx={{ width: "100%" }}>
-                <CardActionArea sx={{ borderTop: "5px solid hsl(208, 92%, 53%)", padding: 3, }}>
+                <CardActionArea sx={{
+                  borderTop: "5px solid",
+                  borderImage: index.icon === InstagramIcon
+                    ? "linear-gradient(to right, hsl(37, 97%, 70%) , hsl(5, 77%, 71%), hsl(329, 70%, 58%)) 1"
+                    : "none",
+                  borderColor: index.icon !== InstagramIcon
+                    ? index.border
+                    : undefined,
+                  padding: 3,
+                }}>
                   <CardMedia >
                     <Typography variant="body2" fontWeight="bold" sx={{ paddingTop: 3 }}>
                       <img src={index.icon} style={{ position: "relative", top: 5, left: -5 }} />@{index.nick}
@@ -50,7 +59,7 @@ export default function Dashboard() {
                       FOLLOWERS
                     </Typography>
                     <Stack sx={{ paddingTop: 3 }}>
-                      <Typography variant="caption">
+                      <Typography variant="caption" sx={{ color: index.iconToday === IconDown ? "hsl(356, 69%, 56%)" : "hsl(163, 72%, 41%)" }}>
                         <img src={index.iconToday} style={{ position: "relative", top: -3, left: -5 }} />{index.ntoday} Today
                       </Typography>
                     </Stack>
