@@ -10,17 +10,17 @@ import YoutubeIcon from '/icon-youtube.svg';
 export default function Dashboard() {
 
   const OverviewRowOne = [
-    { title: "Page Views", icon: FacebookIcon, data: "87", per: "3" },
-    { title: "Likes", icon: FacebookIcon, data: "52", per: "2" },
-    { title: "Likes", icon: InstagramIcon, data: "5462", per: "2257" },
-    { title: "Profile Views", icon: InstagramIcon, data: "52", per: "1375" },
+    { title: "Page Views", icon: FacebookIcon, data: "87", iconToday: IconUp, per: "3" },
+    { title: "Likes", icon: FacebookIcon, data: "52", iconToday: IconDown, per: "2" },
+    { title: "Likes", icon: InstagramIcon, data: "5462", iconToday: IconUp, per: "2257" },
+    { title: "Profile Views", icon: InstagramIcon, data: "52", iconToday: IconUp, per: "1375" },
   ]
 
   const OverviewRowTwo = [
-    { title: "Retweets", icon: TwitterIcon, data: "117", per: "303" },
-    { title: "Likes", icon: TwitterIcon, data: "507", per: "553" },
-    { title: "Likes", icon: YoutubeIcon, data: "107", per: "19" },
-    { title: "Total Views", icon: YoutubeIcon, data: "1407", per: "12" },
+    { title: "Retweets", icon: TwitterIcon, data: "117", iconToday: IconUp, per: "303" },
+    { title: "Likes", icon: TwitterIcon, data: "507", iconToday: IconUp, per: "553" },
+    { title: "Likes", icon: YoutubeIcon, data: "107", iconToday: IconDown, per: "19" },
+    { title: "Total Views", icon: YoutubeIcon, data: "1407", iconToday: IconDown, per: "12" },
   ]
 
   const Media = [
@@ -91,9 +91,9 @@ export default function Dashboard() {
                     <Typography variant="h3" fontWeight="bold">
                       {index.data}
                     </Typography>
-                    <Typography variant="body2" sx={{ alignContent: "end", }}>
-                      <img src={IconDown} style={{ position: "relative", top: -3, left: -5 }} />
-                      {index.per}
+                    <Typography variant="body2" fontWeight="bold" sx={{ alignContent: "end", color: index.iconToday === IconDown ? "hsl(356, 69%, 56%)" : "hsl(163, 72%, 41%)" }}>
+                      <img src={index.iconToday} style={{ position: "relative", top: -3, left: -5 }} />
+                      {index.per}%
                     </Typography>
                   </Stack>
                 </Stack>
@@ -115,9 +115,9 @@ export default function Dashboard() {
                     <Typography variant="h3" fontWeight="bold">
                       {index.data}
                     </Typography>
-                    <Typography variant="body2" sx={{ alignContent: "end" }}>
-                      <img src={IconDown} style={{ position: "relative", top: -3, left: -5 }} />
-                      {index.per}
+                    <Typography variant="body2" fontWeight="bold" sx={{ alignContent: "end", color: index.iconToday === IconDown ? "hsl(356, 69%, 56%)" : "hsl(163, 72%, 41%)" }}>
+                      <img src={index.iconToday} style={{ position: "relative", top: -3, left: -5 }} />
+                      {index.per}%
                     </Typography>
                   </Stack>
                 </Stack>
