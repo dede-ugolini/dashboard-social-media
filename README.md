@@ -7,6 +7,10 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 - React
 - Mui
 
+## Preview
+
+![](./preview.jpg)
+
 ## Author
 
 - [github](https://github.com/dede-ugolini)
